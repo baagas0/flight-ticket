@@ -68,6 +68,18 @@
                         <span>Type Transportation</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('admin.booking') }}" class="waves-effect">
+                        <i class="ri-bookmark-3-line"></i>
+                        <span>Booking</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.payment') }}" class="waves-effect">
+                        <i class="ri-money-cny-circle-line"></i>
+                        <span>Payment</span>
+                    </a>
+                </li>
 
                 <li class="menu-title">Settings</li>
 

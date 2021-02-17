@@ -90,7 +90,7 @@
 <script>
    (function ($) {
 
-      
+
 
       var datatable = $('.table-editable').dataTable({
             "bPaginate": true,
@@ -99,12 +99,12 @@
                   var table = new $.fn.dataTable.Api('.table');
                   var cell = table.cell('td.focus');
                   var cellData = cell.data();
-                  
+
                   var div = document.createElement('div');
                   div.innerHTML = cellData;
                   var a = div.childNodes;
                   a.innerHTML = newValue;
-                  
+
                   var field = a[0].dataset.field;
                   var dataValue = a.innerHTML;
 
@@ -123,7 +123,7 @@
                   console.log(a[0].dataset.field);
                   cell.data(a.innerHTML);
                   highlightCell($(cell.node()));
-                  
+
                   $.ajax({
                      url: '{{ route('admin.transportation.update', '1') }}',
                      type: 'POST',
@@ -136,13 +136,13 @@
                      }
                   });
                   // This is huge cheese, but the a has lost it's editable nature.  Do it again.
-                  $('td.focus a').editable({ 
+                  $('td.focus a').editable({
                     'mode': 'inline',
                     'success' : setCell
                     });
                 };
                 $('.editable').editable(
-                  { 
+                  {
                     'mode': 'inline',
                     'success' : setCell
                   }
@@ -153,10 +153,10 @@
             // },
             "keys" : true
       });
-        
+
     addCellChangeHandler();
     addAutoFillHandler();
-        
+
     function highlightCell($cell) {
         var originalValue = $cell.attr('data-original-value');
         if (!originalValue) {

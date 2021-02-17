@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Transportation;
 use App\Schedulle;
 use App\Airport;
+use App\Payment;
 
 class AjaxController extends Controller
 {
@@ -23,5 +24,11 @@ class AjaxController extends Controller
 	public function postSchedulle() {
 		$data = Schedulle::get();
     	return json_encode($data);
+	}
+
+    public function postPayment() {
+		$data = Payment::get();
+
+    	return response()->json($data);
 	}
 }

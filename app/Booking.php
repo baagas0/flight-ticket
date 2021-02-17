@@ -9,11 +9,15 @@ class Booking extends Model
 {
     use AutoNumberTrait;
 
+    protected $fillable = [
+        'code', 'reference', 'user_id', 'payment_id', 'schedule_id', 'status'
+    ];
+
     public function getAutoNumberOptions()
     {
         return [
             'code' => [
-                'format' => 'INV' . time() . '?',
+                'format' => 'BOOK' . time() . '?',
                 'length' => 5
             ]
         ];

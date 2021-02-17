@@ -16,10 +16,11 @@ class CreateBookingsTable extends Migration
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
             $table->string('code');
+            $table->string('reference');
             $table->foreignId('user_id');
             $table->foreignId('schedule_id');
             $table->foreignId('payment_id');
-            $table->enum('status', [0, 1, 2]);
+            $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });
     }
