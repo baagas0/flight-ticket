@@ -4,8 +4,63 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "072b83985355b7b9dfd8f23a7b8b0b3b",
+    "content-hash": "403905d87b059c5fb00aaa89beceac28",
     "packages": [
+        {
+            "name": "alfa6661/laravel-autonumber",
+            "version": "1.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alfa6661/laravel-autonumber.git",
+                "reference": "17ed12c8352c35b01f24c451f3cee6db36da3467"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alfa6661/laravel-autonumber/zipball/17ed12c8352c35b01f24c451f3cee6db36da3467",
+                "reference": "17ed12c8352c35b01f24c451f3cee6db36da3467",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "^5.1|^6.0|^7.0",
+                "illuminate/database": "^5.1|^6.0|^7.0",
+                "illuminate/support": "^5.1|^6.0|^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Alfa6661\\AutoNumber\\AutoNumberServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Alfa6661\\AutoNumber\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alfa Adhitya",
+                    "email": "alfa2159@gmail.com"
+                }
+            ],
+            "description": "Laravel package to create autonumber for Eloquent model",
+            "homepage": "https://github.com/alfa6661/laravel-autonumber",
+            "keywords": [
+                "autonumber",
+                "eloquent",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/alfa6661/laravel-autonumber/issues",
+                "source": "https://github.com/alfa6661/laravel-autonumber/tree/1.2.4"
+            },
+            "time": "2020-05-05T06:38:51+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.0.2",
@@ -1854,6 +1909,52 @@
                 }
             ],
             "time": "2020-12-14T13:15:25+00:00"
+        },
+        {
+            "name": "muhammadnan/tripay-payment-gateway",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/muhammadnan/tripay-payment-gateway.git",
+                "reference": "bbddd0735182160295d895758fba76476bf5fc11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/muhammadnan/tripay-payment-gateway/zipball/bbddd0735182160295d895758fba76476bf5fc11",
+                "reference": "bbddd0735182160295d895758fba76476bf5fc11",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.0",
+                "symfony/http-foundation": "^5.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.2.2",
+                "symfony/var-dumper": "^5.1.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tripay\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Muhammad Adnan",
+                    "email": "naravaya04@gmail.com"
+                }
+            ],
+            "description": "PHP Payment Gateway Tripay Library",
+            "homepage": "https://payment.tripay.co.id",
+            "support": {
+                "issues": "https://github.com/muhammadnan/tripay-payment-gateway/issues",
+                "source": "https://github.com/muhammadnan/tripay-payment-gateway/tree/1.0.0"
+            },
+            "time": "2021-01-26T15:36:07+00:00"
         },
         {
             "name": "nesbot/carbon",

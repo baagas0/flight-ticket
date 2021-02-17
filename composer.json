@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2.5|^8.0",
+        "alfa6661/laravel-autonumber": "^1.2",
         "bmatovu/multi-auth": "^9.0",
         "browner12/helpers": "^3.3",
         "fideloper/proxy": "^4.4",
@@ -18,6 +19,7 @@
         "laravel/framework": "^7.29",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^2.0",
+        "muhammadnan/tripay-payment-gateway": "^1.0",
         "spatie/laravel-permission": "^4.0",
         "yajra/laravel-datatables-oracle": "~9.0"
     },
@@ -50,7 +52,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "Services\\": "app/Services/"
         }
     },
     "minimum-stability": "dev",
