@@ -229,7 +229,6 @@
 
 {{-- <script src="{{ asset('assets/admin/js/pages/table-editable.init.js') }}"></script>  --}}
 <script>
-<<<<<<< HEAD
 	(function ($) {
 		var datatable = $('.table-editable').dataTable({
 			"bPaginate": true,
@@ -295,73 +294,10 @@
               }
               );
           },
-=======
-   (function ($) {
-
-
-
-      var datatable = $('.table-editable').dataTable({
-            "bPaginate": true,
-            "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                var setCell = function(response, newValue) {
-                  var table = new $.fn.dataTable.Api('.table');
-                  var cell = table.cell('td.focus');
-                  var cellData = cell.data();
-
-                  var div = document.createElement('div');
-                  div.innerHTML = cellData;
-                  var a = div.childNodes;
-                  a.innerHTML = newValue;
-
-                  var field = a[0].dataset.field;
-                  var dataValue = a.innerHTML;
-
-                  if (field == 'name') {
-                     var dataPass = { name : dataValue };
-                  }else if(field == 'economy_chair') {
-                     var dataPass = { economy_chair : dataValue };
-                  }else if(field == 'bussiness_chair') {
-                     var dataPass = { bussiness_chair : dataValue };
-                  }else if(field == 'first_chair') {
-                     var dataPass = { first_chair : dataValue };
-                  }else{
-                     toastr["error"]("Danger", 'Data Not Valid');
-                  }
-
-                  console.log(a[0].dataset.field);
-                  cell.data(a.innerHTML);
-                  highlightCell($(cell.node()));
-
-                  $.ajax({
-                     url: '{{ route('admin.transportation.update', '1') }}',
-                     type: 'POST',
-                     data: dataPass,
-                     success: function(result){
-                        toastr["success"](result, "Success");
-                     },
-                     error: function(error){
-                        toastr["error"](error, "Failed");
-                     }
-                  });
-                  // This is huge cheese, but the a has lost it's editable nature.  Do it again.
-                  $('td.focus a').editable({
-                    'mode': 'inline',
-                    'success' : setCell
-                    });
-                };
-                $('.editable').editable(
-                  {
-                    'mode': 'inline',
-                    'success' : setCell
-                  }
-                );
-            },
->>>>>>> 1600c8a8aaf9c3bc3c8e4919c35cfe35d608e2db
             // "autoFill" : {
             //     "columns" : [1, 2]
             // },
             "keys" : true
-<<<<<<< HEAD
         });
 
 		addCellChangeHandler();
@@ -375,21 +311,6 @@
 			var actualValue = $cell.text();
 			if (!isNaN(originalValue)) {
 				originalValue = parseFloat(originalValue);
-=======
-      });
-
-    addCellChangeHandler();
-    addAutoFillHandler();
-
-    function highlightCell($cell) {
-        var originalValue = $cell.attr('data-original-value');
-        if (!originalValue) {
-            return;
-        }
-        var actualValue = $cell.text();
-        if (!isNaN(originalValue)) {
-            originalValue = parseFloat(originalValue);
->>>>>>> 1600c8a8aaf9c3bc3c8e4919c35cfe35d608e2db
             // actualValue = parseFloat(actualValue);
         }
         if (!isNaN(actualValue)) {

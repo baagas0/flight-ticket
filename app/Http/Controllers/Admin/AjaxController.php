@@ -7,11 +7,8 @@ use Illuminate\Http\Request;
 use App\Transportation;
 use App\Schedulle;
 use App\Airport;
-<<<<<<< HEAD
 use App\Helpers\Calc;
-=======
 use App\Payment;
->>>>>>> 1600c8a8aaf9c3bc3c8e4919c35cfe35d608e2db
 
 class AjaxController extends Controller
 {
@@ -43,7 +40,6 @@ class AjaxController extends Controller
     	return json_encode($data);
 	}
 
-<<<<<<< HEAD
 	// Get Distance & Calculate Price
 	public function postDistancePrice(Request $request) {
 		$response = Calc::price([
@@ -52,11 +48,10 @@ class AjaxController extends Controller
 						'destination'		=> $request->destination,
 					]);
 		return json_encode($response);
-=======
+	}
     public function postPayment() {
 		$data = Payment::get();
 
     	return response()->json($data);
->>>>>>> 1600c8a8aaf9c3bc3c8e4919c35cfe35d608e2db
 	}
 }
