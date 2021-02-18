@@ -30,7 +30,7 @@
                             <ul>
                                 <li>
                                     <figure>
-                                        <a href="javascript:void(0);"><img src="images/thumbnail/img-01.jpg" alt="image destinations"></a>
+                                        <a href="javascript:void(0);"><img src="/images/thumbnail/img-01.jpg" alt="image destinations"></a>
                                     </figure>
                                     <div class="tg-newcontent">
                                         <h4><a href="javascript:void(0);">Bungee Jumping Trip</a></h4>
@@ -42,7 +42,7 @@
                                 </li>
                                 <li>
                                     <figure>
-                                        <a href="javascript:void(0);"><img src="images/thumbnail/img-02.jpg" alt="image destinations"></a>
+                                        <a href="javascript:void(0);"><img src="/images/thumbnail/img-02.jpg" alt="image destinations"></a>
                                     </figure>
                                     <div class="tg-newcontent">
                                         <h4><a href="javascript:void(0);">Trip to White Castle</a></h4>
@@ -82,7 +82,7 @@
                             <form class="tg-formtheme tg-formnewsletter">
                                 <fieldset>
                                     <input type="email" name="email" class="form-control" placeholder="Your Email">
-                                    <button type="submit"><img src="images/icons/icon-08.png" alt="image destinations"></button>
+                                    <button type="submit"><img src="/images/icons/icon-08.png" alt="image destinations"></button>
                                 </fieldset>
                             </form>
                             <span>We respect your privacy</span>

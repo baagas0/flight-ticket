@@ -16,13 +16,9 @@ Route::get('/', 'FrontController@index');
 Route::get('/schedules', 'FrontController@schedules');
 Route::get('/schedule/{id}', 'FrontController@schedule')->name('schedule');
 
-Auth::routes();
 Route::group(['middleware' => 'auth:admin','prefix' => 'admin', 'as' => 'admin'], function() {
 	routeController('dashboard', 'Admin\AdminController');
 
 });
-
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('callback', 'User/CallbackController@callback')->name('callback');

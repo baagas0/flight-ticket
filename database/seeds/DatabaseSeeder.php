@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(PessengerSeeder::class);
         $this->call(AdminSeeder::class);
+        $this->call(UserSeeder::class);
         $this->call(AirportSeeder::class);
         // $this->call(TimoKoerber\LaravelJsonSeeder\JsonDatabaseSeeder::class);
         $this->call(TransportationSeeder::class);

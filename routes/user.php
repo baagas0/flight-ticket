@@ -3,9 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'User'], function() {
-    // Dashboard
-    Route::get('/', 'HomeController@index')->name('user.home');
-
     // Login
     Route::get('login', 'Auth\LoginController@showLoginForm')->name('user.login');
     Route::post('login', 'Auth\LoginController@login');
@@ -30,8 +27,15 @@ Route::group(['namespace' => 'User'], function() {
     // Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('user.verification.verify');
     // Route::post('email/resend', 'Auth\VerificationController@resend')->name('user.verification.resend');
 
-    Route::group(['middleware' => 'auth','prefix' => 'user', 'as' => 'user'], function() {
-        Route::get('/', 'DashboardController@index')->name('dashboard');
+    Route::group(['middleware' => 'auth:user', 'as' => 'user.'], function() {
+        Route::get('/dashboard', 'DashboardController@index')->name('home');
+
+        Route::group(['prefix' => 'booking', 'as' => 'booking.'], function() {
+            Route::get('/', 'BookingController@index')->name('index');
+            Route::get('/{id}/detail', 'BookingController@detail')->name('detail');
+            Route::get('/{schedule}/checkout', 'BookingController@checkout')->name('checkout');
+            Route::post('/{schedule}/pay', 'BookingController@pay')->name('pay');
+        });
 
     });
 

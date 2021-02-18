@@ -12,5 +12,4 @@
 <script src="/js/countdown.js"></script>
 <script src="/js/parallax.js"></script>
 <script src="/js/gmap3.js"></script>
-<script src="/js/main.js"></script>
 @yield('js')

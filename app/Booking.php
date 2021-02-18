@@ -10,7 +10,7 @@ class Booking extends Model
     use AutoNumberTrait;
 
     protected $fillable = [
-        'code', 'reference', 'user_id', 'payment_id', 'schedule_id', 'status'
+        'code', 'reference', 'user_id', 'payment_id', 'schedule_id', 'status', 'type', 'number_of_person', 'total'
     ];
 
     public function getAutoNumberOptions()
