@@ -18,10 +18,9 @@ class CreateAirportsTable extends Migration
             $table->string('name');
             $table->string('city');
             $table->string('country');
-            $table->string('iata_code');
-            $table->string('_geoloc');
-            $table->string('links_count');
-            // $table->string('objectID');
+            $table->string('iataCode');
+            $table->string('_geolocLat');
+            $table->string('_geolocLng');
             $table->timestamps();
         });
     }

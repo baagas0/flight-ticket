@@ -19,7 +19,9 @@ class CreateSchedullesTable extends Migration
             $table->datetime('date');
             $table->integer('from_code');
             $table->integer('destination_code');
-            $table->decimal('price');
+            $table->decimal('economy_price', 24,2);
+            $table->decimal('bussiness_price', 24,2);
+            $table->decimal('first_price', 24,2);
             $table->timestamps();
         });
 

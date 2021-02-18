@@ -65,7 +65,9 @@
 			{ data:"name", title: "Name" },
 			{ data:"city", title: "City" },
 			{ data:"country", title: "Country Code" },
-			{ data:"iata_code", title: "Coordinate" },
+			{ data:"iataCode", title: "Iata Code" },
+			{ data:"_geolocLat", title: "Langtitude" },
+			{ data:"_geolocLng", title: "Longtitude" },
 		]
 		
 	});

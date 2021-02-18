@@ -16,9 +16,12 @@ class CreateTransportationsTable extends Migration
         Schema::create('transportations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('economy_chair');
-            $table->integer('bussiness_chair');
-            $table->integer('first_chair');
+            $table->integer('economy_seat');
+            $table->decimal('economy_price');
+            $table->integer('bussiness_seat');
+            $table->decimal('bussiness_price');
+            $table->integer('first_seat');
+            $table->decimal('first_price');
             $table->timestamps();
         });
     }
