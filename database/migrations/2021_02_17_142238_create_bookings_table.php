@@ -20,6 +20,7 @@ class CreateBookingsTable extends Migration
             $table->foreignId('user_id');
             $table->foreignId('schedule_id');
             $table->foreignId('payment_id');
+            $table->enum('type', ['Economy', 'Bussiness', 'First']);
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });

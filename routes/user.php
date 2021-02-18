@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 Route::group(['namespace' => 'User'], function() {
     // Dashboard
     Route::get('/', 'HomeController@index')->name('user.home');
@@ -27,4 +29,10 @@ Route::group(['namespace' => 'User'], function() {
     // Route::get('email/verify', 'Auth\VerificationController@show')->name('user.verification.notice');
     // Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('user.verification.verify');
     // Route::post('email/resend', 'Auth\VerificationController@resend')->name('user.verification.resend');
+
+    Route::group(['middleware' => 'auth','prefix' => 'user', 'as' => 'user'], function() {
+        Route::get('/', 'DashboardController@index')->name('dashboard');
+
+    });
+
 });
