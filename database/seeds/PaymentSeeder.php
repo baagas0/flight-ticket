@@ -28,16 +28,6 @@ class PaymentSeeder extends Seeder
             }
         }
 
-        Payment::updateOrCreate([
-            'code' => 'MANUAL',
-        ], [
-            'name'         => 'Transfer Manual',
-            'group'        => 'Bank Tranfer',
-            'fee_flat'     => 0,
-            'fee_percent'  => 0,
-            'deactived_at' => NULL
-        ]);
-
         return true;
     }
 }

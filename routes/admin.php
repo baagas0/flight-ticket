@@ -7,6 +7,8 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth:admin', 'as' => 'adm
     routeController('airport', 'Admin\AirportController');
     routeController('transportation', 'Admin\TransportationController');
     routeController('type-transportation', 'Admin\TypeTransportationController');
+    routeController('booking', 'Admin\BookingController');
+    routeController('payment', 'Admin\PaymentController');
 });
 
 

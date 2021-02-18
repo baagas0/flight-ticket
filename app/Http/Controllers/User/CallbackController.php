@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Booking;
 
 class CallbackController extends Controller
 {
@@ -23,7 +24,7 @@ class CallbackController extends Controller
 		{
 			if( $request->status == 'PAID' )
 			{
-				PaymentService::callback($request->merchant_ref);
+				Booking::where(['code' => $request->merchant_ref, 'status' => 0])->update(['status' => 1]);
 			}
 		}
 
